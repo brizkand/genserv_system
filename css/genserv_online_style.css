@@ -1,0 +1,508 @@
+* {
+    box-sizing: border-box;
+} 
+body{
+	padding: 0;
+	margin: 0;
+	background-color: rgba(0, 0, 0, .7);
+}
+/*this is for header design*/
+div.genserv_header{
+	position:fixed;
+	top: 0;
+	background: rgba(0, 0, 0, 0.9);
+	width:100%;
+	z-index: 1;
+}
+/*for header image or logo design*/
+div.genserv_header img{
+	background-size: cover;	
+	background-position: center;
+	width:100%;
+}
+/*for top navigation design*/
+ul.top_nav{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 17%;
+	overflow: hidden;
+	font-family: "open sans","droid sans","pt sans",lato;
+	padding: 5px;
+}
+ul.top_nav li{
+	float: left;
+}
+/*:not(.active)*/
+ul.top_nav li a.mainbtn:hover, ul.top_nav li a.dropbtn:hover{
+	background-color: #1e90ff;
+	color: #000;
+}
+/*
+ul.top_nav li a.active{
+	background-color: #f8f8ff;
+	color: 	#006400;
+	cursor: default;
+
+}
+*/
+ul.top_nav li a.mainbtn, ul.top_nav li a.dropbtn{
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: rgb(0, 118, 0);
+	margin-right: 5px;
+	border-radius: 10px;
+	padding: 8px 5px;
+	color: #fff;
+	
+}
+/*end of the top navigation main design*/
+
+/*start of the top navigation dropdown buttons design*/
+li.dropdown{
+	display: inline-block;
+}
+/*for unhiding the container of dropdown-content buttons when hovered*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*container of dropdown buttons*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	border-radius: 10px;
+}
+/*dropdown buttons*/
+.dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+/*when dropdown content buttons hovered*/
+.dropdown-content a:hover{
+	background-color: #0ED4F3;
+	border-radius: 10px;
+	display: block;
+}
+/*THIS IS FOR THE SECOND OPTIONS IN NAVIGATION*/
+/*div.dropdown-content2{
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	border-radius: 10px;
+}
+
+.second-options{
+}
+.dropdown-content2 a {
+    color: black;
+    padding: 7px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+when dropdown content buttons hovered
+.dropdown-content2 a:hover{
+	background-color: #0ED4F3;
+	border-radius: 10px;
+	display: block;
+}*/
+/*end of the dropdown design*/
+/*container of left and right container for the body design*/
+div.whole{
+	width: 100%;
+	padding: 0;
+	margin: 160px 0 0 0;
+}
+/*left body design*/
+div.personal_info{
+	height: 100%;
+	width:17%;
+	padding: 20px 15px;
+	float: left;
+	position: fixed;
+}
+/*right body design*/
+.main{
+	width: 83%;
+	float: left;
+	padding: 20px 15px;
+	background: url('../images/body_background.png');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	margin-left: 17%;
+}
+div.whole div.personal_info p.capitalize{
+	text-align: center;
+	text-transform: capitalize;
+	font-family: "open sans","droid sans","pt sans",lato;
+	color: #ffffff;
+	font-weight: 900;
+}
+div.whole div.personal_info p.lower{
+	text-align: center;
+	font-family: "open sans","droid sans","pt sans",lato;
+	color: #ffffff;
+	font-weight: lighter;
+}
+div.whole div.personal_info p.logout{
+	text-align: center;
+}
+div.whole div.personal_info p.logout a{
+	text-align: center;
+	font-family: "open sans","droid sans","pt sans",lato;
+	color: powderblue;
+	font-weight: bold;
+	font-size: 18px;
+}
+div.whole div.personal_info p.logout a:hover{
+	color: rgba(255, 0, 0, .5);
+}
+/*THIS IS FOR ADMIN PAGE TO MAKE VISIBLE NONE*/
+div div li#adminControls{
+	display: none;
+}
+.doNotDisplay{
+	display: none;
+}
+/*THIS IS FOR BOX INSIDE THE MAIN CLASS OR THE MAIN STAGE*/
+.box{
+	background: rgba(176, 224, 230, .8);
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding:20px 30px;
+	font-family: "open sans","droid sans","pt sans",lato;
+	margin-bottom: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.upperCase{
+	text-transform: uppercase;
+}
+/*THIS IS FOR SUBMIT BUTTON INSIDE THE BOX CLASS INSIDE THE MAIN DIV INSIDE WHOLE DIV*/
+.box input[type="submit"]{
+	border:none;
+	outline: none;
+	height: 35px;
+	/*background: #2f4f4f;*/
+	background-color: #1496BB;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	padding: 5px 10px;
+}
+/*THIS IS FOR SUBMIT BUTTON HOVER INSIDE THE BOX CLASS INSIDE THE MAIN DIV INSIDE WHOLE DIV*/
+.box input[type="submit"]:hover{
+	cursor: pointer;
+	background: #39dc79;
+	color:#000;
+}
+/*THIS IS FOR FILE BUTTON INSIDE THE BOX CLASS INSIDE THE MAIN DIV INSIDE WHOLE DIV*/
+.box input[type="file"]{
+	border:none;
+	outline: none;
+	background: #2f4f4f;
+	color: #fff;
+	font-size: 16px;
+	padding: 5px 5px 5px 16px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+.box input[type="date"]{
+	width: 200px;
+	margin-bottom: 20px;
+	/*height: 35px;*/
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	transition: width .5s;
+	padding: 5px 5px 5px 16px;
+}
+.box input[type="text"]{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	transition: width .5s;
+}
+.box input[type="password"]{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	transition: width .5s;
+}
+.box input[type="radio"]{
+	margin-bottom: 20px;
+	height: 20px;
+	width: 20px;
+	color: #000;
+	text-transform: capitalize;
+}
+.box input[type="number"]{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	transition: width .5s;
+	background-color: rgba(255, 255, 255);
+}
+h2{
+	border-bottom: 1px ridge coral;
+	font-size: 18px;
+	outline: none;
+	padding: 10px 10px 0 10px;
+	font-family: helvetica,"open sans","droid sans","pt sans",lato;
+	color: #062F4F;
+	margin-bottom: 15px;
+	text-align: center;
+}
+/*BUTTON STYLE*/
+.box button{
+	border:none;
+	outline: none;
+	background: #2f4f4f;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+.box button:hover{
+	cursor: pointer;
+	background: #39dc79;
+	color:#000;
+}
+.box input[type="number"]:focus,.box input[type="text"]:focus, .box input[type="password"]:focus, .box input[type="date"]:focus, .box input[type="password"]:focus,.box select:focus{
+	width: 270px;
+	background-color: rgb(0,0,255, .2);
+	/*color: white;*/
+	color: #093145;
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+.box textarea:focus{
+	background-color: rgb(0,0,255, .2);
+	/*color: white;*/
+	color: #093145;
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+.box span{
+	font-weight: bold;
+	font-size: 18px;
+	color: #2F4F4F;
+}
+.box p{
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding:5px;
+	font-family: arial,"open sans","droid sans","pt sans",lato;
+	display: inline-block;
+	width:60%;
+}
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+	margin-bottom: 20px;
+}
+.box select{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	text-transform: capitalize;
+	transition: width .5s;
+}
+/*THIS IS FOR THE TABLE STYLES*/
+/*THIS IS FOR THE TEXT CAPTION OF THE TABLE*/
+caption{
+	font-size: 20px;
+	background-color: #F7B733;
+	padding: 7px;
+	color: #093145;
+	border-radius: 5px 5px 0 0;
+}
+table{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 5px;
+	border-radius: 0 0 5px 5px;
+	border-collapse: collapse;
+	width: 100%;
+}
+.employee_table td/*, .employee_table th*/{
+	border-bottom: 3px ridge #ddd;
+	/*border-radius: 5px;*/
+	font-size: 12px;
+	text-align: center;
+	color: #d20117;
+	padding: 2px 4px;
+}
+.employee_table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+.employee_table tr:hover{
+	background-color: #ddd;
+}
+.employee_table th{
+	padding: 3px 5px;
+	font-size: 13px;
+	color: white;
+	background-color: #4CAF50;
+	
+}
+/*THIS IS FOR READONLY NUMBER INPUT TYPE OR USER IS NOT VALID TO EDIT!!!*/
+.box input[type="number"].readonly{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	background-color: rgba(0, 0, 0, .2);
+}
+.box input[type="number"].readonly:focus{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	background-color: rgba(0, 0, 0, .2);
+}
+/*THIS IS FOR READONLY TEXT INPUT TYPE OR USER IS NOT VALID TO EDIT!!!*/
+.box input[type="text"].readonlyText{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	background-color: rgba(0, 0, 0, .2);
+}
+.box input[type="text"].readonlyText:focus{
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 16px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	background-color: rgba(0, 0, 0, .2);
+}
+/*THIS IS FOR THE TITLE NAME OF THE PAGE DESIGN*/
+.pageTitle{
+	border-bottom: 4px ridge coral;
+	font-size: 30px;
+	outline: none;
+	padding: 10px 10px 0 10px;
+	font-family: "open sans","droid sans","pt sans",lato;
+	color: #107896;
+	margin-bottom: 15px;
+	background-color: rgba(223,222,195,.7);
+	border-radius: 8px 8px 0 0;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: sticky;
+	top: 155px;
+}
+/*THIS IS THE DESIGN FOR THE FORM!*/
+.box form{
+	outline: none;
+	padding: 10px 10px 10px 10px;
+	font-family: "open sans","droid sans","pt sans",lato;
+	margin-bottom: 15px;
+	background-color: rgba(223,222,195,.5);
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*THIS IS A LINK FOR SHOWING AND HIDING FORMS OR DATA*/
+a.hideAndShow{
+	font-size: 18px;
+	background-color: #EEAA7B;
+	padding: 7px 15px 7px 15px;
+	color: #093145;
+	border-radius: 5px;
+}
+a.hideAndShow:hover{
+	font-size: 18px;
+	cursor: pointer;
+	background: #39dc79;
+	color:#000;
+	padding: 7px 15px 7px 15px;
+	border-radius: 5px;
+}
+.box input[type="search"]{
+	width: 50%;
+	margin-bottom: 30px;
+	height: 35px;
+	color: white;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	transition: width .5s;
+	margin-top: 0;
+	background-image: url("../images/search_icon.png");
+	background-position: 5px 5px;
+	background-repeat: no-repeat;
+	background-size: 25px;
+	padding: 12px 20px 12px 40px;
+	background-color: #00BFFF;
+}
+.box input[type="search"]:focus{
+	width: 100%;
+}
+/*THIS IS FOR ERROR MESSAGE DESIGN*/
+.box span.error{
+	font-style: italic;
+	font-size: 16px;
+	color: #d20117;
+	margin-left: 10px;
+}
+div.table_content{
+	overflow-x: auto;
+}
+.displayNone{
+	display: none;
+}
+p.total{
+	padding: 5px 10px;
+	color: white;
+	background-color: #F26D21;
+	width: auto;
+	margin-bottom: 5px;
+}
+b.value{
+	color: #093145;
+	padding-left: 50px;
+}
